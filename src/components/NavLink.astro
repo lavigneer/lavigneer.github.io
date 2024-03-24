@@ -1,0 +1,11 @@
+---
+// Credit to https://dev.to/vincentdorian/cool-nav-link-hover-animations-with-tailwindcss-3gf2 for the styling
+interface Props {
+	href: string
+}
+---
+<a
+	class="relative block w-fit text-xl after:absolute after:block after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-50 after:transition after:duration-200 after:content-[''] after:hover:scale-x-100"
+	href={Astro.props.href}
+	><slot />
+</a>
