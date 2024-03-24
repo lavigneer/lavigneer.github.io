@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets'
+import meImage from '../images/me.jpg'
+import Index from '../pages/index.astro'
+
 interface Props {
 	title: string
 }
@@ -17,14 +21,22 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="sticky left-0 right-0 top-0 px-8 py-4">
-			<a href="/">Eric Lavigne</a>
-			<div class="float-right flex gap-8">
-				<a href="">About Me</a>
-				<a href="">Resume</a>
-				<a href="">Projects</a>
-				<a href="">Blog</a>
-				<a href="">Contact</a>
+		<nav class="sticky left-0 right-0 top-0 flex items-center bg-slate-200 px-8 py-4">
+			<div class="grow">
+				<a class="inline-flex items-center" href="/"
+					><Image
+						class="mr-4 inline-block h-10 w-10 rounded-full ring-2 ring-white"
+						src={meImage}
+						alt="me"
+					/>Eric Lavigne</a
+				>
+			</div>
+			<div class="flex gap-8">
+				<a href="/">About Me</a>
+				<a href="/resume">Resume</a>
+				<a href="/projects">Projects</a>
+				<a href="/blog">Blog</a>
+				<a href="/contact">Contact</a>
 				<button
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
