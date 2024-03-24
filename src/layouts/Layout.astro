@@ -22,7 +22,9 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="sticky left-0 right-0 top-0 flex items-center bg-white z-50 px-8 py-4">
+		<nav
+			class="sticky left-0 right-0 top-0 z-50 flex items-center bg-white px-8 pt-4 pb-2 drop-shadow-md"
+		>
 			<div class="grow">
 				<a class="inline-flex items-center" href="/"
 					><Image
@@ -40,11 +42,13 @@ const { title } = Astro.props
 				<NavLink href="/contact">Contact</NavLink>
 			</div>
 		</nav>
+		<div class=" z-50 h-2 w-full bg-white"></div>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	html, body {
+	html,
+	body {
 		min-height: 100vh;
 		flex-direction: column;
 		display: flex;
