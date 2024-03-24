@@ -2,11 +2,10 @@
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
 import meLargeImage from '../images/me-large.jpg'
-import type { getEntries, getEntry } from 'astro:content'
 ---
 
 <Layout title="About Me">
-	<main class="relative grow p-12">
+	<main class="relative grow px-12 py-16">
 		<div class="absolute left-0 top-0 z-0 h-full w-5/12 bg-slate-600"></div>
 		<div class="relative z-10 m-auto grid w-9/12 grid-cols-2">
 			<div class="flex flex-col items-center bg-slate-300 p-12 drop-shadow-2xl">
@@ -23,9 +22,7 @@ import type { getEntries, getEntry } from 'astro:content'
 			<div class="prose prose-slate flex flex-col items-start p-12">
 				<div class="flex">
 					<div class="typing-animation">
-						<h1 class="my-0 overflow-hidden whitespace-nowrap font-mono text-6xl">
-							Hello world!
-						</h1>
+						<h1 class="my-0 overflow-hidden whitespace-nowrap font-mono text-6xl">Hello world!</h1>
 					</div>
 				</div>
 				<h2>A Bit About Me</h2>
