@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Resume">
+	<main class="relative grow px-12 py-16 print:p-0">
+		<article
+			class="grid w-full grid-cols-[max-content_24rem] justify-center print:grid-cols-[2fr_1fr]"
+		>
+			<div class="mb-8">
+				<h1 class="text-4xl uppercase">Eric Lavigne</h1>
+				<h2 class="text-2xl uppercase text-slate-600">Staff Engineer - Team Lead</h2>
+			</div>
+			<div class="bg-slate-700"></div>
+			<div class="pattern-bg prose prose-sm prose-slate grow pr-8">
+				<h3>Summary</h3>
+				<hr />
+				<ul>
+					<li>Experienced, organized, and highly motivated software design engineer with 10+ years of experience owning and working in a large scale code base and building well-maintained web applications</li>
+					<li>Lead a team of talented individuals to meet the goals of our products and provided key technical insight in strategies to accomplish these goals</li>
+					<li>Desires exploration in other areas of expertise to become a more well-rounded engineer</li>
+					<li>Particularly enjoys work that focuses on making development lifecycles more efficient and simple</li>
+					<li>Believes that proper communication plays a key role in the success of a project</li>
+				</ul>
+				<h3>Experience</h3>
+				<hr />
+				<h4>Staff Engineer - Team Lead</h4>
+				<figcaption>Evertz Microsystems | Aug 2023 - Present</figcaption>
+				<ul>
+					<li>Experimented and implemented a potential next-generation VueWeb, with an emphasis on reducing stack complexity/technical debt and ease of on-boarding. Eventually the following stack was used for a proof of concept app:
+						<ul>
+							<li>Go: with a focus on using the standard library wherever possible</li>
+							<li>HTMX: for UI interactivity</li>
+							<li>Tailwind: simplified styling mechanism</li>
+							<li>Webcomponents: long-term maintainability and support was the focus, as well as portability</li>
+						</ul>
+					</li>
+					<li>Continued work on the main VueWeb platform, including application work and CI improvements</li>
+					<li>Mentorship of the team and consulting on larger product goals and direction</li>
+				</ul>
+				<h4>Senior Engineer - Team Lead</h4>
+				<figcaption>Evertz Microsystems | Aug 2019 - Aug 2023 </figcaption>
+				<ul>
+					<li>Contributed to and mentored work on a Backend-For-Frontend GraphQL api to facilitate better integration and data workflows with our front-end</li>
+					<li>Investigated how to deploy and build a backend service to our systems, including leveraging systemd units, logging conventions, bundling etc.,</li>
+					<li>Built a data-driven workflow that allows developers of backend services to expose custom forms for their unique use-cases using a JSON based markup to generated the form content</li>
+					<li>Integrated with several backend services to build a scheduling dashboard around building out the requirements of a production, such that customers could get all the resources allocated during a time period they would need for a production, including the option to dynamically provision nodes in the cloud for more compute</li>
+					<li>Investigated ways to make our GraphQL service more robust and reliable, implemented a service that writes materialized views of the data we fetch to a local MongoDB instance that can then be queried by our GraphQL service</li>
+					<li>Contributed to our products' move from a bespoke authentication mechanism to an OAuth based one</li>
+					<li>Worked on the client-side implementation of a "virtual desktop" application that allows users to interact with our embedded GUI's (Vue) from the browser, utilizing WebRTC technologies for low-latency streaming of the video signal</li>
+				</ul>
+				<h4>Intermediate Engineer - Team Lead</h4>
+				<figcaption>Evertz Microsystems | Aug 2017 - Aug 2019</figcaption>
+				<ul>
+					<li>Mentored several team members on the technology stack of our new framework and conducted code review</li>
+					<li>Continued development of the next generation VueWeb framework, building more complex applications and integrating more sophisticated data fetching methodologies</li>
+					<li>Integrated a Docker-based development workflow (pre-dating the devcontainers spec) to allow for consistent development environments and easier onboarding</li>
+					<li>Consolidated our various package repositories under one mono-repo for easier management and development</li>
+					<li>Investigated and implemented ways to improve developer experience, including build and CI-related performance improvements</li>
+					<li>Lead interviews with candidates for various positions on our team</li>
+				</ul>
+				<h4>Junior Design Engineer</h4>
+				<ul>
+					<li>Lead research into various technologies that could be used in the next generation VueWeb product, ultimately choosing a React-based framework</li>
+					<li>Developed the React-based platform from scratch and implemented/integrated the following (non-exhaustive):
+						<ul>
+							<li>Application routing and registration</li>
+							<li>Build system</li>
+							<li>UI component library</li>
+							<li>Data management layer</li>
+						</ul>
+					</li>
+					<li>Built a robust front-end scheduling application for setting up tasks to run at various times, including integrating a calendaring system and live timeline of the tasks</li>
+					<li>Constructed an application for managing and viewing the video and audio media of the Dreamcatcher live replay product</li>
+				</ul>
+				<figcaption>Evertz Microsystems | Sept 2015 - Aug 2017</figcaption>
+				<h4>Design Engineer - Intern</h4>
+				<figcaption>Evertz Microsystems | May 2012 - May 2015 (Intermittent accumuluation of 20 months)</figcaption>
+				<ul>
+					<li>Web applications development work on the CP2116 and CP2232 control button panel configuration</li>
+					<li>Created a plugin-system for our Python embedded applications to expose button controls that could be customized by end users, including building a web-based application for users to build these customizations and layout of button controls</li>
+					<li>Built a Python GUI application for embedded hardware to control other video decoder hardware</li>
+					<li>Contributed to several major features of the Dreamcatcher product, including a clip viewer widget for the web dashboard that allows users to view the video content on the system and manage it</li>
+					<li>Manual testing of early-stage product functionality</li>
+				</ul>
+				<h4>Services Engineer - Intern</h4>
+				<figcaption>OpenText | Summer 2011</figcaption>
+				<ul>
+					<li>Helped maintain and manage deployments of services for key customers</li>
+					<li>Responded to requests for service help</li>
+					<li>Wrote documentation on how to use the various services of the FirstClass product</li>
+				</ul>
+				<h3>Education</h3>
+				<hr />
+				<h4>University of Waterloo <span class="float-right">2010-2015</span></h4>
+				<h5>Bachelor of Computer Science</h5>
+				<h6 class="text-sm">
+					Honours Computer Science & Join Honours Psychology - Co-operative Program
+				</h6>
+			</div>
+			<div class="prose prose-sm prose-invert bg-slate-700 px-8">
+				<h3>Strengths</h3>
+				<hr class="border-slate-200" />
+				<h4>Adaptability</h4>
+				<p>
+					Demonstrated throught the ability to keep up with the latest technologies in the rapdily changing web applications development space
+				</p>
+				<h4>Leadership</h4>
+				<p>
+					Mentored and lead a team of developers, educating them on core engineering patterns with a high level of expectation
+				</p>
+				<h4>Passion and Commitment</h4>
+				<p>
+					Evolved a major project over many years and explored and experimented with ways to innovate and improve it
+				</p>
+				<h4>Oranized</h4>
+				<p>
+					Ensured work was tracked, communicating with stakeholders to ensure tasks were clear and followed up to close any loops
+				</p>
+				<h3>Skills</h3>
+				<hr class="border-slate-200" />
+				<ul>
+					<li>Typescript, Javascript</li>
+					<li>HTML, CSS, Less, Sass</li>
+					<li>React</li>
+					<li>Go</li>
+					<li>MongoDB</li>
+					<li>GraphQL, Redux</li>
+					<li>NodeJS, Express</li>
+					<li>Tailwind</li>
+					<li>HTMX</li>
+					<li>Jenkins/CI</li>
+					<li>Docker</li>
+					<li>NX, Webpack, Jest, Playwright</li>
+				</ul>
+			</div>
+		</article>
+	</main>
+</Layout>
+
+<style></style>
