@@ -1,5 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import githubIcon from '../images/github-mark-white.svg'
+import linkedInIcon from '../images/In-White-34.png'
+import mailIcon from '../images/mail.svg'
+import phoneIcon from '../images/phone.svg'
 ---
 
 <Layout title="Resume">
@@ -11,50 +16,126 @@ import Layout from "../layouts/Layout.astro";
 				<h1 class="text-4xl uppercase">Eric Lavigne</h1>
 				<h2 class="text-2xl uppercase text-slate-600">Staff Engineer - Team Lead</h2>
 			</div>
-			<div class="bg-slate-700"></div>
+			<div class="flex place-content-center items-center justify-evenly bg-slate-700">
+				<a href="https://github.com/lavigneer">
+					<Image
+						class="inline-block h-8 w-8 fill-white"
+						src={githubIcon}
+						alt="https://github.com/lavigneer"
+					/>
+				</a>
+				<a href="https://www.linkedin.com/in/eric-lavigne-4b529a38">
+					<Image
+						class="inline-block h-8 w-8 fill-white"
+						src={linkedInIcon}
+						alt="https://www.linkedin.com/in/eric-lavigne-4b529a38"
+					/>
+				</a>
+				{
+					import.meta.env.EMAIL ? (
+						<a href={`mailto:${import.meta.env.EMAIL}`}>
+							<Image
+								class="inline-block h-8 w-8 fill-white"
+								src={mailIcon}
+								alt={import.meta.env.EMAIL}
+							/>
+						</a>
+					) : null
+				}
+				{
+					import.meta.env.PHONE ? (
+						<a href={`tel:${import.meta.env.PHONE}`}>
+							<Image
+								class="inline-block h-8 w-8 fill-white"
+								src={phoneIcon}
+								alt={import.meta.env.PHONE}
+							/>
+						</a>
+					) : null
+				}
+			</div>
 			<div class="pattern-bg prose prose-sm prose-slate grow pr-8">
 				<h3>Summary</h3>
 				<p>
-					Software design engineer with 10+ years of experience owning and working in a large scale code base.
-					Demonstrated competency in building tools and workflows that make development more efficient and simple.
-					Passionate about the full stack of applications and software architecture and design.
+					Software design engineer with 10+ years of experience owning and working in a large scale
+					code base. Demonstrated competency in building tools and workflows that make development
+					more efficient and simple. Passionate about the full stack of applications and software
+					architecture and design.
+				</p>
 				<h3>Experience</h3>
 				<h4>Staff Engineer - Team Lead</h4>
 				<figcaption>Evertz Microsystems | Aug 2023 - Present</figcaption>
 				<ul>
-					<li>Investigate ways to simplify the technology stack used by our product to reduce maintenance and on-boarding effort</li>
-					<li>Implemented a next-generation web application stack built on Go and HTMX, using a status and metrics page redesign as a proof of concept</li>
-					<li>Collaborates with stakeholders on product direction and provides feedback on current system design</li>
-					<li>Works with product specialists and designers to plan new applications and redesign of existing applications</li>
-					<li>Collaborated on new scheduling workflows, an Adobe Premiere media asset extension, and a conference calling application</li>
-					<li>Debug and investigates urgent customer issues, including performance and data synchronization issues</li>
+					<li>
+						Investigate ways to simplify the technology stack used by our product to reduce
+						maintenance and on-boarding effort
+					</li>
+					<li>
+						Implemented a next-generation web application stack built on Go and HTMX, using a status
+						and metrics page redesign as a proof of concept
+					</li>
+					<li>
+						Collaborates with stakeholders on product direction and provides feedback on current
+						system design
+					</li>
+					<li>
+						Works with product specialists and designers to plan new applications and redesign of
+						existing applications
+					</li>
+					<li>
+						Collaborated on new scheduling workflows, an Adobe Premiere media asset extension, and a
+						conference calling application
+					</li>
+					<li>
+						Debug and investigates urgent customer issues, including performance and data
+						synchronization issues
+					</li>
 				</ul>
 				<h4>Senior Engineer - Team Lead</h4>
-				<figcaption>Evertz Microsystems | Aug 2019 - Aug 2023 </figcaption>
+				<figcaption>Evertz Microsystems | Aug 2019 - Aug 2023</figcaption>
 				<ul>
 					<li>Contributed to a Backend-For-Frontend GraphQL API</li>
-					<li>Implemented a backend service that writes materialized views of data to MongoDB for efficient querying by the GraphQL layer</li>
-					<li>Created a WebRTC-based application to act as a "virtual desktop" client to embedded native GUI's from the browser</li>
+					<li>
+						Implemented a backend service that writes materialized views of data to MongoDB for
+						efficient querying by the GraphQL layer
+					</li>
+					<li>
+						Created a WebRTC-based application to act as a "virtual desktop" client to embedded
+						native GUI's from the browser
+					</li>
 				</ul>
 				<h4>Intermediate Engineer - Team Lead</h4>
 				<figcaption>Evertz Microsystems | Aug 2017 - Aug 2019</figcaption>
 				<ul>
-					<li>Designed and implemented a Docker-based development workflow for consistent development environment setup</li>
-					<li>Investigated and implemented ways to improve developer experience, including build and CI-related performance improvements</li>
+					<li>
+						Designed and implemented a Docker-based development workflow for consistent development
+						environment setup
+					</li>
+					<li>
+						Investigated and implemented ways to improve developer experience, including build and
+						CI-related performance improvements
+					</li>
 					<li>Built robust task scheduling and media asset management front-end applications</li>
 				</ul>
 				<h4>Junior Design Engineer</h4>
 				<figcaption>Evertz Microsystems | Sept 2015 - Aug 2017</figcaption>
 				<ul>
-					<li>Lead the research and development of a new web application framework that replaced the legacy system</li>
+					<li>
+						Lead the research and development of a new web application framework that replaced the
+						legacy system
+					</li>
 				</ul>
 				<h4>Design Engineer - Intern</h4>
-				<figcaption>Evertz Microsystems | May 2012 - May 2015 (Intermittent accumulation of 20 months)</figcaption>
+				<figcaption>
+					Evertz Microsystems | May 2012 - May 2015 (Intermittent accumulation of 20 months)
+				</figcaption>
 				<ul>
-					<li>Created a plugin-system for Python embedded applications to expose ways to allow users to customize their workflows</li>
+					<li>
+						Created a plugin-system for Python embedded applications to expose ways to allow users
+						to customize their workflows
+					</li>
 				</ul>
 				<h3>Education</h3>
-				<hr />
 				<h4>University of Waterloo <span class="float-right">2010-2015</span></h4>
 				<h5>Bachelor of Computer Science</h5>
 				<h6 class="text-sm">
@@ -66,19 +147,24 @@ import Layout from "../layouts/Layout.astro";
 				<hr class="border-slate-200" />
 				<h4>Adaptability</h4>
 				<p>
-					Kept up with the rapidly changing web applications development space. Ensured dependencies were well-managed, replacing several key technologies as needed.
+					Kept up with the rapidly changing web applications development space. Ensured dependencies
+					were well-managed, replacing several key technologies as needed.
 				</p>
 				<h4>Leadership</h4>
 				<p>
-					Mentored the team on various technologies and engineering best-practices. Well-recognized in the team as a source of technical knowledge.
+					Mentored the team on various technologies and engineering best-practices. Well-recognized
+					in the team as a source of technical knowledge.
 				</p>
 				<h4>Passion and Commitment</h4>
 				<p>
-					Evolved a major product over many years with over 800k lines of code, performed detailed code review, integrated static analysis tools and designed test automation workflows to ensure code quality.
+					Evolved a major product over many years with over 800k lines of code, performed detailed
+					code review, integrated static analysis tools and designed test automation workflows to
+					ensure code quality.
 				</p>
 				<h4>Organized</h4>
 				<p>
-					Ensured high team effectiveness by tracking and planning work in Jira, conducting check-ins to avoid blockers, following up with stakeholders, and managing releases.
+					Ensured high team effectiveness by tracking and planning work in Jira, conducting
+					check-ins to avoid blockers, following up with stakeholders, and managing releases.
 				</p>
 				<h3>Skills</h3>
 				<hr class="border-slate-200" />
